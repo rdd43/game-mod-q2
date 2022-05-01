@@ -18,6 +18,8 @@ C:\Users\rober\Source\Repos\quake2-full\game\g_local.h(456,21): message : see de
 C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(897,9): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(885,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(893,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(911,14): warning C4013: 'ED_CallSpawn' undefined; assuming extern returning int
+C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(910,1): warning C4133: 'initializing': incompatible types - from 'char [22]' to 'edict_t *'
   g_combat.c
 C:\Users\rober\Source\Repos\quake2-full\game\g_combat.c(370,51): warning C4100: 'attacker': unreferenced formal parameter
 C:\Users\rober\Source\Repos\quake2-full\game\g_combat.c(370,36): warning C4100: 'targ': unreferenced formal parameter

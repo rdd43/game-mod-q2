@@ -899,6 +899,18 @@ void Cmd_PlayerList_f(edict_t *ent)
 	gi.cprintf(ent, PRINT_HIGH, "%s", text);
 }
 
+//MY CODE
+void Cmd_testCMD(edict_t* ent)
+{
+	gi.cprintf(ent, PRINT_HIGH, "%s", "GI cprintF test \n");
+}
+
+void Cmd_testSpawn(edict_t* ent)
+{
+	edict_t* eTest = "monster_soldier_light";
+	ED_CallSpawn(eTest);
+	gi.cprintf(ent, PRINT_HIGH, "%s", "testing Spawn \n");
+}
 
 /*
 =================
@@ -987,6 +999,11 @@ void ClientCommand (edict_t *ent)
 		Cmd_Wave_f (ent);
 	else if (Q_stricmp(cmd, "playerlist") == 0)
 		Cmd_PlayerList_f(ent);
+	//MY CODE
+	else if (Q_stricmp(cmd, "testCMD") == 0)
+		Cmd_testCMD(ent);
+	else if (Q_stricmp(cmd, "testSpawn") == 0)
+		Cmd_testSpawn(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }
