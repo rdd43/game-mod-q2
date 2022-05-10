@@ -1184,8 +1184,9 @@ typedef struct
 	float		fov;			// horizontal field of view
 
 	int			rdflags;		// refdef flags
-
+	
 	short		stats[MAX_STATS];		// fast status bar updates
+
 } player_state_t;
 
 

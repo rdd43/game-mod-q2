@@ -19,12 +19,20 @@ Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 */
 
 #include "g_local.h"
-
 game_locals_t	game;
 level_locals_t	level;
 game_import_t	gi;
 game_export_t	globals;
 spawn_temp_t	st;
+
+//my variables
+cvar_t* MenuPulled;
+cvar_t* MenuToggle;
+cvar_t* PlayerGold;
+//cvar_t* HealthLevel;
+//cvar_t* BlasterLevel;
+//cvar_t* HasItem;
+//end my variables
 
 int	sm_meat_index;
 int	snd_fry;

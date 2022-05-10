@@ -857,8 +857,10 @@ void Weapon_Blaster_Fire (edict_t *ent)
 	//MY CODE
 	damage = 100;
 	//end my code
-	Blaster_Fire (ent, vec3_origin, damage, false, EF_BLASTER);
+
+	Blaster_Fire(ent, vec3_origin, damage, false, EF_BLASTER);
 	ent->client->ps.gunframe++;
+	
 }
 
 void Weapon_Blaster (edict_t *ent)

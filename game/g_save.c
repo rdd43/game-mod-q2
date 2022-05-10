@@ -171,6 +171,12 @@ void InitGame (void)
 	gi.cvar ("gamename", GAMEVERSION , CVAR_SERVERINFO | CVAR_LATCH);
 	gi.cvar ("gamedate", __DATE__ , CVAR_SERVERINFO | CVAR_LATCH);
 
+	//my variables
+	MenuPulled = gi.cvar("MenuPulled", "h", 0);
+	MenuToggle = gi.cvar("MenuPulled", "0", 0);
+	PlayerGold = gi.cvar("PlayerGold", "0", 0);
+	//end my variables
+
 	maxclients = gi.cvar ("maxclients", "4", CVAR_SERVERINFO | CVAR_LATCH);
 	maxspectators = gi.cvar ("maxspectators", "4", CVAR_SERVERINFO);
 	deathmatch = gi.cvar ("deathmatch", "0", CVAR_LATCH);

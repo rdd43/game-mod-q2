@@ -303,36 +303,53 @@ void HelpComputer (edict_t *ent)
 {
 	char	string[1024];
 	char	*sk;
+	if (MenuPulled->value == 'mh'){
 
-	if (skill->value == 0)
-		sk = "easy";
-	else if (skill->value == 1)
-		sk = "medium";
-	else if (skill->value == 2)
-		sk = "hard";
-	else
-		sk = "hard+";
+		Com_sprintf(string, sizeof(string),
+			"xv 0 yv 12 picn inventory "		// background -> from file
+			"xv 0 yv 25 string2 \"%s\" "		// welcome
+			"xv 0 yv 50 cstring2 \"%s\" "		// menu name
+			"xv 0 yv 75 cstring2 \"%s\" "		// msg1
+			"xv 0 yv 100 cstring2 \"%s\" "		// msg2
+			"xv 0 yv 125 cstring2 \"%s\" "		// msg3
+			"xv 0 yv 150 cstring2 \"%s\" "		// msg4
+			"xv 0 yv 175 cstring2 \"Gold : %f\" "		// Gold Message
+			,
+			"Welcome to my mod",
+			"This is the help screen",
+			"Controlls: m - open this help menu",
+			"The mod lets you upgraede your character stats using the shop",
+			"Enemies will drop gold when they die that you can spend in the shop",
+			"That is all, have fun!",
+			PlayerGold->value);
 
-	// send the layout
-	Com_sprintf (string, sizeof(string),
-		"xv 32 yv 8 picn help "			// background
-		"xv 202 yv 12 string2 \"%s\" "		// skill
-		"xv 0 yv 24 cstring2 \"%s\" "		// level name
-		"xv 0 yv 54 cstring2 \"%s\" "		// help 1
-		"xv 0 yv 110 cstring2 \"%s\" "		// help 2
-		"xv 50 yv 164 string2 \" kills     goals    secrets\" "
-		"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ", 
-		sk,
-		level.level_name,
-		game.helpmessage1,
-		game.helpmessage2,
-		level.killed_monsters, level.total_monsters, 
-		level.found_goals, level.total_goals,
-		level.found_secrets, level.total_secrets);
+		gi.WriteByte(svc_layout);
+		gi.WriteString(string);
+		gi.unicast(ent, true);
+	}
+	if (MenuPulled->value == 'h') {
+		// send the layout
+		Com_sprintf(string, sizeof(string),
+			"xv 32 yv 8 picn help "			// background -> Pulls from file
+			"xv 202 yv 12 string2 \"%s\" "		// skill
+			"xv 0 yv 24 cstring2 \"%s\" "		// level name
+			"xv 0 yv 54 cstring2 \"%s\" "		// help 1
+			"xv 0 yv 110 cstring2 \"%s\" "		// help 2
+			"xv 50 yv 164 string2 \" kills     goals    secrets\" "
+			"xv 50 yv 172 string2 \"%3i/%3i     %i/%i       %i/%i\" ",
+			sk,
+			level.level_name,
+			game.helpmessage1,
+			game.helpmessage2,
+			level.killed_monsters, level.total_monsters,
+			level.found_goals, level.total_goals,
+			level.found_secrets, level.total_secrets);
 
-	gi.WriteByte (svc_layout);
-	gi.WriteString (string);
-	gi.unicast (ent, true);
+		gi.WriteByte(svc_layout);
+		gi.WriteString(string);
+		gi.unicast(ent, true);
+	}
+	
 }
 
 
@@ -343,7 +360,7 @@ Cmd_Help_f
 Display the current help message
 ==================
 */
-void Cmd_Help_f (edict_t *ent)
+void Cmd_Help_f (edict_t *ent, char MenuPulled)
 {
 	// this is for backwards compatability
 	if (deathmatch->value)
@@ -363,7 +380,7 @@ void Cmd_Help_f (edict_t *ent)
 
 	ent->client->showhelp = true;
 	ent->client->pers.helpchanged = 0;
-	HelpComputer (ent);
+	HelpComputer (ent, MenuPulled);
 }
 
 
@@ -376,6 +393,7 @@ G_SetStats
 */
 void G_SetStats (edict_t *ent)
 {
+	//THIS IS HOW YOU EDIT HUD
 	gitem_t		*item;
 	int			index, cells;
 	int			power_armor_type;

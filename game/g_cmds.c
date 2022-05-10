@@ -899,17 +899,22 @@ void Cmd_PlayerList_f(edict_t *ent)
 	gi.cprintf(ent, PRINT_HIGH, "%s", text);
 }
 
+int helpFlag = 0;
+
 //MY CODE
-void Cmd_testCMD(edict_t* ent)
-{
-	gi.cprintf(ent, PRINT_HIGH, "%s", "GI cprintF test \n");
+void Cmd_testCMD(edict_t* ent){
+
 }
 
 void Cmd_testSpawn(edict_t* ent)
 {
-	edict_t* eTest = "monster_soldier_light";
-	ED_CallSpawn(eTest);
-	gi.cprintf(ent, PRINT_HIGH, "%s", "testing Spawn \n");
+	
+}
+
+void Cmd_MyHelp(edict_t* ent)
+{
+	MenuPulled->value = 'mh';
+	Cmd_Help_f(ent);
 }
 
 /*
@@ -948,6 +953,7 @@ void ClientCommand (edict_t *ent)
 	}
 	if (Q_stricmp (cmd, "help") == 0)
 	{
+		MenuPulled->value = 'h';
 		Cmd_Help_f (ent);
 		return;
 	}
@@ -1004,6 +1010,8 @@ void ClientCommand (edict_t *ent)
 		Cmd_testCMD(ent);
 	else if (Q_stricmp(cmd, "testSpawn") == 0)
 		Cmd_testSpawn(ent);
+	else if (Q_stricmp(cmd, "myHelp") == 0)
+		Cmd_MyHelp(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }

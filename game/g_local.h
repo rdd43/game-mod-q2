@@ -454,6 +454,11 @@ extern	level_locals_t	level;
 extern	game_import_t	gi;
 extern	game_export_t	globals;
 extern	spawn_temp_t	st;
+//my variables
+extern cvar_t* MenuPulled;
+extern cvar_t* MenuToggle;
+extern cvar_t* PlayerGold;
+//end my variables
 
 extern	int	sm_meat_index;
 extern	int	snd_fry;
@@ -972,7 +977,7 @@ struct edict_s
 
 	qboolean	inuse;
 	int			linkcount;
-
+	
 	// FIXME: move these fields to a server private sv_entity_t
 	link_t		area;				// linked to a division node or leaf
 	

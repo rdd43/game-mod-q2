@@ -1144,7 +1144,9 @@ mmove_t soldier_move_death6 = {FRAME_death601, FRAME_death610, soldier_frames_de
 void soldier_die (edict_t *self, edict_t *inflictor, edict_t *attacker, int damage, vec3_t point)
 {
 	int		n;
-
+	//my code
+	PlayerGold->value = PlayerGold->value + 1;
+	//end my code
 // check for gib
 	if (self->health <= self->gib_health)
 	{
