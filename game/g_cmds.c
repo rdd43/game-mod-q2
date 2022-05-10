@@ -903,7 +903,8 @@ int helpFlag = 0;
 
 //MY CODE
 void Cmd_testCMD(edict_t* ent){
-
+	MenuPulled->value = 'sh';
+	Cmd_Help_f(ent);
 }
 
 void Cmd_testSpawn(edict_t* ent)

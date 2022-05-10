@@ -307,7 +307,7 @@ void HelpComputer (edict_t *ent)
 
 		Com_sprintf(string, sizeof(string),
 			"xv 0 yv 12 picn inventory "		// background -> from file
-			"xv 0 yv 25 string2 \"%s\" "		// welcome
+			"xv 0 yv 25 cstring2 \"%s\" "		// welcome
 			"xv 0 yv 50 cstring2 \"%s\" "		// menu name
 			"xv 0 yv 75 cstring2 \"%s\" "		// msg1
 			"xv 0 yv 100 cstring2 \"%s\" "		// msg2
@@ -317,7 +317,7 @@ void HelpComputer (edict_t *ent)
 			,
 			"Welcome to my mod",
 			"This is the help screen",
-			"Controlls: m - open this help menu",
+			"Controlls: m - This Help... n - shop menu",
 			"The mod lets you upgraede your character stats using the shop",
 			"Enemies will drop gold when they die that you can spend in the shop",
 			"That is all, have fun!",
@@ -349,7 +349,29 @@ void HelpComputer (edict_t *ent)
 		gi.WriteString(string);
 		gi.unicast(ent, true);
 	}
-	
+	if (MenuPulled->value == 'sh') {
+
+		Com_sprintf(string, sizeof(string),
+			"xv 0 yv 12 picn inventory "		// background -> from file
+			"xv 0 yv 25 ctring2 \"Shop - Gold : %f\" "		// welcome
+			"xv 0 yv 50 cstring2 \"Blaster Level: %f\" "		// menu name
+			"xv 0 yv 75 cstring2 \"Shotgun Level: %f\" "		// msg1
+			"xv 0 yv 100 cstring2 \"Machine Gun Level: %f\" "		// msg2
+			"xv 0 yv 125 cstring2 \"Rocket Launcher Level: %f\" "		// msg3
+			"xv 0 yv 150 cstring2 \"Rail Gun Level: %f\" "		// msg4
+			"xv 0 yv 175 cstring2 \"\" "		// Gold Message
+			,
+			PlayerGold->value,
+			PlayerGold->value,
+			PlayerGold->value,
+			PlayerGold->value,
+			PlayerGold->value,
+			PlayerGold->value);
+
+		gi.WriteByte(svc_layout);
+		gi.WriteString(string);
+		gi.unicast(ent, true);
+	}
 }
 
 

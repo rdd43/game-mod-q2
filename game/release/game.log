@@ -18,8 +18,7 @@ C:\Users\rober\Source\Repos\quake2-full\game\g_local.h(456,21): message : see de
 C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(897,9): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(885,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(893,4): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(905,27): warning C4100: 'ent': unreferenced formal parameter
-C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(909,29): warning C4100: 'ent': unreferenced formal parameter
+C:\Users\rober\Source\Repos\quake2-full\game\g_cmds.c(910,29): warning C4100: 'ent': unreferenced formal parameter
   g_combat.c
 C:\Users\rober\Source\Repos\quake2-full\game\g_combat.c(370,51): warning C4100: 'attacker': unreferenced formal parameter
 C:\Users\rober\Source\Repos\quake2-full\game\g_combat.c(370,36): warning C4100: 'targ': unreferenced formal parameter
@@ -403,10 +402,10 @@ C:\Users\rober\Source\Repos\quake2-full\game\p_client.c(1415,2): warning C4996: 
   p_hud.c
 C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(234,11): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
 C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(245,10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(364,1): warning C4029: declared formal parameter list different from definition
-C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(363,37): warning C4459: declaration of 'MenuPulled' hides global declaration
+C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(386,1): warning C4029: declared formal parameter list different from definition
+C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(385,37): warning C4459: declaration of 'MenuPulled' hides global declaration
 C:\Users\rober\Source\Repos\quake2-full\game\g_local.h(458,16): message : see declaration of 'MenuPulled'
-C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(383,21): warning C4020: 'HelpComputer': too many actual parameters
+C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(405,21): warning C4020: 'HelpComputer': too many actual parameters
   p_trail.c
   p_view.c
 C:\Users\rober\Source\Repos\quake2-full\game\p_view.c(42,27): warning C4100: 'angles': unreferenced formal parameter
@@ -437,6 +436,6 @@ C:\Users\rober\Source\Repos\quake2-full\game\q_shared.c(1234,2): warning C4996: 
 C:\Users\rober\Source\Repos\quake2-full\game\q_shared.c(1334,11): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   Generating Code...
 C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(332): warning C4700: uninitialized local variable 'sk' used
-C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(441): warning C4701: potentially uninitialized local variable 'cells' used
+C:\Users\rober\Source\Repos\quake2-full\game\p_hud.c(463): warning C4701: potentially uninitialized local variable 'cells' used
      Creating library .\..\release\gamex86.lib and object .\..\release\gamex86.exp
   game.vcxproj -> C:\Users\rober\Source\Repos\quake2-full\game\release\gamex86.dll
