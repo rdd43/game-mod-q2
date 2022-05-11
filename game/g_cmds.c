@@ -907,6 +907,67 @@ void Cmd_testCMD(edict_t* ent){
 	Cmd_Help_f(ent);
 }
 
+void Cmd_UpgradeBlaster(edict_t* ent) {
+	if (MenuPulled->value == 'sh') {
+		if (ent->client->showhelp == true) {
+			if (PlayerGold->value > 0) {
+				BlasterLevel->value = BlasterLevel->value + 1;
+				PlayerGold->value = PlayerGold->value - 1;
+			}
+		}
+		Cmd_Help_f(ent);
+		Cmd_Help_f(ent);
+	}
+}
+void Cmd_UpgradeShotGun(edict_t* ent) {
+	if (MenuPulled->value == 'sh') {
+		if (ent->client->showhelp == true) {
+			if (PlayerGold->value > 0) {
+				ShotGunLevel->value = ShotGunLevel->value + 1;
+				PlayerGold->value = PlayerGold->value - 1;
+			}
+		}
+		Cmd_Help_f(ent);
+		Cmd_Help_f(ent);
+	}
+}
+void Cmd_UpgradeMachineGun(edict_t* ent) {
+	if (MenuPulled->value == 'sh') {
+		if (ent->client->showhelp == true) {
+			if (PlayerGold->value > 0) {
+				MachineGunLevel->value = MachineGunLevel->value + 1;
+				PlayerGold->value = PlayerGold->value - 1;
+			}
+		}
+		Cmd_Help_f(ent);
+		Cmd_Help_f(ent);
+	}
+}
+void Cmd_UpgradeRocketLauncher(edict_t* ent) {
+	if (MenuPulled->value == 'sh') {
+		if (ent->client->showhelp == true) {
+			if (PlayerGold->value > 0) {
+				RocketLauncherLevel->value = RocketLauncherLevel->value + 1;
+				PlayerGold->value = PlayerGold->value - 1;
+			}
+		}
+		Cmd_Help_f(ent);
+		Cmd_Help_f(ent);
+	}
+}
+void Cmd_UpgradeRailGun(edict_t* ent) {
+	if (MenuPulled->value == 'sh') {
+		if (ent->client->showhelp == true) {
+			if (PlayerGold->value > 0) {
+				RailGunLevel->value = RailGunLevel->value + 1;
+				PlayerGold->value = PlayerGold->value - 1;
+			}
+		}
+		Cmd_Help_f(ent);
+		Cmd_Help_f(ent);
+	}
+}
+
 void Cmd_testSpawn(edict_t* ent)
 {
 	
@@ -1013,6 +1074,19 @@ void ClientCommand (edict_t *ent)
 		Cmd_testSpawn(ent);
 	else if (Q_stricmp(cmd, "myHelp") == 0)
 		Cmd_MyHelp(ent);
+	else if (Q_stricmp(cmd, "upgradeBlaster") == 0)
+		Cmd_UpgradeBlaster(ent);
+	else if (Q_stricmp(cmd, "upgradeShotGun") == 0)
+		Cmd_UpgradeShotGun(ent);
+	else if (Q_stricmp(cmd, "upgradeMachineGun") == 0)
+		Cmd_UpgradeMachineGun(ent);
+	else if (Q_stricmp(cmd, "upgradeRocketLauncher") == 0)
+		Cmd_UpgradeRocketLauncher(ent);
+	else if (Q_stricmp(cmd, "upgradeRailGun") == 0)
+		Cmd_UpgradeRailGun(ent);
 	else	// anything that doesn't match a command will be a chat
 		Cmd_Say_f (ent, false, true);
 }
+
+
+

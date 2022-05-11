@@ -174,7 +174,12 @@ void InitGame (void)
 	//my variables
 	MenuPulled = gi.cvar("MenuPulled", "h", 0);
 	MenuToggle = gi.cvar("MenuPulled", "0", 0);
-	PlayerGold = gi.cvar("PlayerGold", "0", 0);
+	PlayerGold = gi.cvar("PlayerGold", "10", 0);
+	BlasterLevel = gi.cvar("BlasterLevel", "1", 0);
+	ShotGunLevel = gi.cvar("ShotGunLevel", "1", 0);
+	MachineGunLevel = gi.cvar("MachineGunLevel", "1", 0);
+	RocketLauncherLevel = gi.cvar("RocketLauncherLevel", "1", 0);
+	RailGunLevel = gi.cvar("RailGunLevel", "1", 0);
 	//end my variables
 
 	maxclients = gi.cvar ("maxclients", "4", CVAR_SERVERINFO | CVAR_LATCH);

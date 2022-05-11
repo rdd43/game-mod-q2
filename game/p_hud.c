@@ -353,19 +353,20 @@ void HelpComputer (edict_t *ent)
 
 		Com_sprintf(string, sizeof(string),
 			"xv 0 yv 12 picn inventory "		// background -> from file
-			"xv 0 yv 25 ctring2 \"Shop - Gold : %f\" "		// welcome
-			"xv 0 yv 50 cstring2 \"Blaster Level: %f\" "		// menu name
-			"xv 0 yv 75 cstring2 \"Shotgun Level: %f\" "		// msg1
-			"xv 0 yv 100 cstring2 \"Machine Gun Level: %f\" "		// msg2
-			"xv 0 yv 125 cstring2 \"Rocket Launcher Level: %f\" "		// msg3
-			"xv 0 yv 150 cstring2 \"Rail Gun Level: %f\" "		// msg4
-			"xv 0 yv 175 cstring2 \"\" "		// Gold Message
+			"xv 0 yv 25 ctring2 \"Shop - Gold : %f\" "		// Gold
+			"xv 0 yv 50 cstring2 \"[H] Blaster Level: %f\" "		// bl
+			"xv 0 yv 75 cstring2 \"[J] Shotgun Level: %f\" "		// sl
+			"xv 0 yv 100 cstring2 \"[K] Machine Gun Level: %f\" "		// ml
+			"xv 0 yv 125 cstring2 \"[L] Rocket Launcher Level: %f\" "		// rl
+			"xv 0 yv 150 cstring2 \"[O] Rail Gun Level: %f\" "		// rgl
+			"xv 0 yv 175 cstring2 \"Gold : %f\" "		// Gold Message
 			,
 			PlayerGold->value,
-			PlayerGold->value,
-			PlayerGold->value,
-			PlayerGold->value,
-			PlayerGold->value,
+			BlasterLevel->value,
+			ShotGunLevel->value,
+			MachineGunLevel->value,
+			RocketLauncherLevel->value,
+			RailGunLevel->value,
 			PlayerGold->value);
 
 		gi.WriteByte(svc_layout);

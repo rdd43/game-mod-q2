@@ -29,8 +29,13 @@ spawn_temp_t	st;
 cvar_t* MenuPulled;
 cvar_t* MenuToggle;
 cvar_t* PlayerGold;
+cvar_t* BlasterLevel;
+cvar_t* ShotGunLevel;
+cvar_t* MachineGunLevel;
+cvar_t* RocketLauncherLevel;
+cvar_t* RailGunLevel;
 //cvar_t* HealthLevel;
-//cvar_t* BlasterLevel;
+
 //cvar_t* HasItem;
 //end my variables
 

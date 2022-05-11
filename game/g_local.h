@@ -458,6 +458,11 @@ extern	spawn_temp_t	st;
 extern cvar_t* MenuPulled;
 extern cvar_t* MenuToggle;
 extern cvar_t* PlayerGold;
+extern cvar_t* BlasterLevel;
+extern cvar_t* ShotGunLevel;
+extern cvar_t* MachineGunLevel;
+extern cvar_t* RocketLauncherLevel;
+extern cvar_t* RailGunLevel;
 //end my variables
 
 extern	int	sm_meat_index;
