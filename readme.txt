@@ -1,29 +1,23 @@
+# Game-Mod-Q2
+IT266 Quake 2 Final Project.
+Goal of this project was to create an RPG style game in quake2 through the use of a shop menu
+that lets you upgrade your character. 
 
-This is the complete source code for Quake 2, version 3.19, buildable with
-visual C++ 6.0.  The linux version should be buildable, but we haven't
-tested it for the release.
+To Test this mod create a folder in your directory for Q2
+Then download the files inside the MOD folder and slap that in the folder that you just created inside your Q2 directory.
+Then you can run the mod (using a shortcut - add +set game 'Name_Of_Mod_Folder' at the end outside of the qutoes) 
 
-The code is all licensed under the terms of the GPL (gnu public license).  
-You should read the entire license, but the gist of it is that you can do 
-anything you want with the code, including sell your new version.  The catch 
-is that if you distribute new binary versions, you are required to make the 
-entire source code available for free to everyone.
-
-The primary intent of this release is for entertainment and educational 
-purposes, but the GPL does allow commercial exploitation if you obey the 
-full license.  If you want to do something commercial and you just can't bear 
-to have your source changes released, we could still negotiate a separate 
-license agreement (for $$$), but I would encourage you to just live with the 
-GPL.
-
-All of the Q2 data files remain copyrighted and licensed under the 
-original terms, so you cannot redistribute data from the original game, but if 
-you do a true total conversion, you can create a standalone game based on 
-this code.
-
-Thanks to Robert Duffy for doing the grunt work of building this release.
-
-John Carmack
-Id Software
+common deliverables
+- Shortcut that Auto-Launches your Mod - Done
+- Mod in a Separate Folder - Done
+- README file in GIT that explains HOWTO install and play / test your mod - Done
+- UI updates reflecting your Personal Deliverables - Done
+- Help Screen to detail how to play your mod in game - Done
 
 
+The specific deliverables are: 
+- Shop
+- Loot Drops
+- Retheme Weapons
+- Consumables
+- Arena Combat System
